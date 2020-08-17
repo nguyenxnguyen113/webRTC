@@ -2,15 +2,9 @@ mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
 
 const configuration = {
     iceServers: [{
-        urls: [{
-                url: 'stun:stun.l.google.com:19302'
-
-            },
-            {
-                url: 'stun:stun1.l.google.com:19302',
-                username: "nguyen456",
-                credential: "123123"
-            }
+        urls: [
+            'stun:stun.l.google.com:19302',
+            'stun:stun1.l.google.com:19302',
         ],
     }, ],
     iceCandidatePoolSize: 10,
