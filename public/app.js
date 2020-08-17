@@ -1,14 +1,8 @@
 mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
 
-const configuration = {
-    iceServers: [{
-        urls: [
-            'stun:stun1.l.google.com:19302',
-            'stun:stun2.l.google.com:19302',
-        ],
-    }, ],
-    iceCandidatePoolSize: 10,
-};
+const configuration = { 'iceServers': [{ 'urls': 'turn:https://nguyenxnguyen113.github.io/webRTC/' }], iceCandidatePoolSize: 10 };
+
+
 
 let peerConnection = null;
 let localStream = null;
