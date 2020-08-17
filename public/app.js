@@ -3,8 +3,8 @@ mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
 const configuration = {
     iceServers: [{
         urls: [
-            'stun:stun.l.google.com:19302',
             'stun:stun1.l.google.com:19302',
+            'stun:stun2.l.google.com:19302',
         ],
     }, ],
     iceCandidatePoolSize: 10,
@@ -66,7 +66,8 @@ async function createRoom() {
     await roomRef.set(roomWithOffer);
     roomId = roomRef.id;
     console.log(`New room created with SDP offer. Room ID: ${roomRef.id}`);
-    document.querySelector('#currentRoom').innerText = `Current room is ${roomRef.id} - You are the caller!`;
+    document.querySelector(
+        '#currentRoom').innerText = `Current room is ${roomRef.id} - You are the caller!`;
     // Code for creating a room above
 
     peerConnection.addEventListener('track', event => {
